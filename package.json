@@ -1,0 +1,53 @@
+{
+  "name": "vscode-api-integrator",
+  "displayName": "API Integrator",
+  "description": "Integrate third-party APIs like Stripe and Novu into your codebase quickly.",
+  "version": "0.0.1",
+  "publisher": "your-name",
+  "engines": {
+    "vscode": ">=1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:apiIntegrator.integrateApi",
+    "onCommand:apiIntegrator.insertApiEndpoint"
+  ],
+  "main": "./out/src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "apiIntegrator.integrateApi",
+        "title": "Integrate API"
+      },
+      {
+        "command": "apiIntegrator.insertApiEndpoint",
+        "title": "Insert API Endpoint Call",
+        "category": "API Integrator"
+      },
+      {
+        "command": "apiIntegrator.openCopilotChat",
+        "title": "Open API Copilot Chat"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.2",
+    "@types/vscode": "^1.70.0",
+    "typescript": "^4.7.4",
+    "vsce": "^2.11.0"
+  },
+  "dependencies": {
+    "@novu/node": "^2.6.6",
+    "stripe": "^18.0.0",
+    "yaml": "^2.7.1"
+  }
+}

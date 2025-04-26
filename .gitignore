@@ -1,0 +1,32 @@
+# Node and VSCode
+node_modules/
+out/
+.env
+.env.*
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# AI Chatbot Backend
+ai-chatbot/backend/.env
+ai-chatbot/backend/.env.*
+ai-chatbot/backend/__pycache__/
+ai-chatbot/backend/*.pyc
+
+# Logs and system files
+*.log
+.DS_Store
+
+# OS junk
+Thumbs.db
+
+# Remove secrets/examples
+!ai-chatbot/backend/.env.example
+
+# Ignore other secrets
+secrets.*
